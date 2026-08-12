@@ -1,3 +1,4 @@
+Final run command : powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\publish-site.ps1" -Message "Describe your update"
 # Naga Guntapalli — Portfolio Website
 
 Source for [nagaguntapalli.github.io](https://nagaguntapalli.github.io/). This is a plain static site: no framework, build tool, database, or paid service is required.
