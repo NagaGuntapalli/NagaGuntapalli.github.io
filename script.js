@@ -19,13 +19,11 @@ const projectCards = document.querySelectorAll('.project-card');
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const selected = button.dataset.filter;
-
     filterButtons.forEach((item) => {
       const active = item === button;
       item.classList.toggle('active', active);
       item.setAttribute('aria-pressed', String(active));
     });
-
     projectCards.forEach((card) => {
       card.classList.toggle('is-hidden', selected !== 'all' && card.dataset.category !== selected);
     });
