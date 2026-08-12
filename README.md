@@ -8,6 +8,22 @@ Source for [nagaguntapalli.github.io](https://nagaguntapalli.github.io/). This i
 - `styles.css` — colors, typography, spacing, layout, and mobile design
 - `script.js` — mobile navigation, project filters, and current year
 
+## Publish from Windows
+
+After previewing your saved changes with Live Server, run this from PowerShell in the website folder:
+
+```powershell
+.\publish-site.ps1
+```
+
+To supply your own commit message:
+
+```powershell
+.\publish-site.ps1 -Message "Update homepage"
+```
+
+The script checks that you are on `main`, stages the known website files, commits new changes, and pushes `main` to GitHub. GitHub Pages then republishes the site, which can take a few minutes.
+
 ## Edit on GitHub
 
 1. Open the file to change.
