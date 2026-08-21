@@ -85,6 +85,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .filter-button { padding: .48rem .72rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: transparent; cursor: pointer; font: 600 .74rem var(--body); }
 .filter-button.active { color: #fff; background: var(--deep); }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.project-stack { display: grid; align-content: start; gap: .85rem; }
 .project-card { position: relative; padding: clamp(1.15rem, 2vw, 1.5rem); background: rgba(251,250,246,.82); border: 1px solid rgba(23,37,43,.09); border-radius: var(--radius); transition: transform .22s, box-shadow .22s, opacity .2s; }
 .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .project-card.is-hidden { display: none; }
@@ -95,6 +96,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .mini-tags li { padding: .3rem .5rem; border-radius: 5px; color: #315d5a; background: #e3eeea; font-size: .67rem; font-weight: 600; }
 .text-link, .case-study-note { display: inline-block; margin-top: .35rem; color: var(--teal); font-size: .77rem; font-weight: 700; text-decoration: none; }
 .case-study-note { color: var(--muted); font-weight: 500; }
+.project-poster { margin: 1.25rem 0 0; }
+.project-poster-trigger { display: block; width: 100%; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #fff; cursor: zoom-in; }
+.project-poster img { display: block; width: 100%; height: auto; transition: transform .25s ease; }
+.project-poster-trigger:hover img { transform: scale(1.015); }
+.project-poster figcaption { margin-top: .5rem; color: var(--muted); font-size: .72rem; }
+.poster-lightbox { width: min(96vw, 1400px); max-width: none; max-height: 94vh; padding: 2.7rem .75rem .75rem; overflow: auto; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 28px 80px rgba(0,0,0,.3); }
+.poster-lightbox::backdrop { background: rgba(8,20,25,.82); backdrop-filter: blur(4px); }
+.poster-lightbox img { display: block; width: 100%; height: auto; }
+.poster-lightbox-close { position: absolute; top: .55rem; right: .7rem; padding: .35rem .65rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--surface); cursor: pointer; font: 700 .75rem var(--body); }
 
 .capability-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; overflow: hidden; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); }
 .capability-grid article { padding: 1.45rem; background: var(--paper); }
