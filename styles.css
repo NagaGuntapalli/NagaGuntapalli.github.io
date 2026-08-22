@@ -87,6 +87,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
 .project-stack { display: grid; align-content: start; gap: .85rem; }
 .project-card { position: relative; padding: clamp(1.15rem, 2vw, 1.5rem); background: rgba(251,250,246,.82); border: 1px solid rgba(23,37,43,.09); border-radius: var(--radius); transition: transform .22s, box-shadow .22s, opacity .2s; }
+.project-card-wide { grid-column: 1 / -1; }
+.thesis-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); align-items: start; }
+.thesis-layout .project-poster { margin-top: 0; }
 .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .project-card.is-hidden { display: none; }
 .card-category { margin: 0 0 .75rem; color: var(--teal); font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
@@ -129,7 +132,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .profile-card { max-width: 280px; justify-self: start; }
-  .intro-grid, .contact-section, .experience-groups { grid-template-columns: 1fr; }
+  .intro-grid, .contact-section, .experience-groups, .thesis-layout { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: repeat(2, 1fr); }
   .publication-list article { grid-template-columns: 120px 1fr; }
   .publication-list p { grid-column: 2; text-align: left; }
