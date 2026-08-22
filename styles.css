@@ -84,16 +84,26 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .filters { display: flex; flex-wrap: wrap; gap: .4rem; }
 .filter-button { padding: .48rem .72rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: transparent; cursor: pointer; font: 600 .74rem var(--body); }
 .filter-button.active { color: #fff; background: var(--deep); }
-.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.project-grid { display: grid; gap: clamp(1.35rem, 3vw, 2.25rem); }
+.portfolio-segment { display: grid; gap: .75rem; }
+.portfolio-segment-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.portfolio-segment-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.portfolio-segment:first-child .portfolio-segment-heading { padding-top: 0; border-top: 0; }
+.portfolio-segment-heading .eyebrow { margin: 0; white-space: nowrap; }
+.portfolio-segment-heading h3 { margin: 0; color: var(--muted); font: 500 1rem var(--body); text-align: right; }
 .project-stack { display: grid; align-content: start; gap: .85rem; }
 .project-card { position: relative; padding: clamp(1.15rem, 2vw, 1.5rem); background: rgba(251,250,246,.82); border: 1px solid rgba(23,37,43,.09); border-radius: var(--radius); transition: transform .22s, box-shadow .22s, opacity .2s; }
 .project-card-wide { grid-column: 1 / -1; }
 .thesis-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); align-items: start; }
 .thesis-layout .project-poster { margin-top: 0; }
+.project-split-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); align-items: center; }
+.project-split-layout .project-poster { margin-top: 0; }
+.project-summary-layout { display: grid; grid-template-columns: minmax(240px, .8fr) minmax(0, 1.2fr); gap: clamp(1rem, 3vw, 2.5rem); align-items: start; }
+.project-summary-details > p { max-width: 680px; margin: 0; color: var(--muted); font-size: .9rem; }
 .thesis-copy h3 { font-size: clamp(1.5rem, 2.35vw, 1.95rem); }
 .project-card .thesis-copy > p:not(.card-category) { font-size: .95rem; }
 .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-.project-card.is-hidden { display: none; }
+.project-card.is-hidden, .portfolio-segment.is-hidden { display: none; }
 .card-category { margin: 0 0 .75rem; color: var(--teal); font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
 .project-card h3 { max-width: 500px; margin: 0; font: 600 clamp(1.28rem, 2vw, 1.62rem) var(--display); line-height: 1.14; letter-spacing: -.025em; }
 .project-card > p:not(.card-category) { max-width: 550px; color: var(--muted); font-size: .88rem; }
@@ -134,7 +144,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .profile-card { max-width: 280px; justify-self: start; }
-  .intro-grid, .contact-section, .experience-groups, .thesis-layout { grid-template-columns: 1fr; }
+  .intro-grid, .contact-section, .experience-groups, .thesis-layout, .project-split-layout, .project-summary-layout { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: repeat(2, 1fr); }
   .publication-list article { grid-template-columns: 120px 1fr; }
   .publication-list p { grid-column: 2; text-align: left; }
@@ -150,7 +160,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero { padding-top: 3rem; }
   .hero h1 { font-size: clamp(1.45rem, 6.6vw, 2.05rem); }
   .signal-list { grid-template-columns: 1fr; }
-  .project-grid, .capability-grid { grid-template-columns: 1fr; }
+  .project-grid, .portfolio-segment-grid, .capability-grid { grid-template-columns: 1fr; }
+  .portfolio-segment-heading { align-items: flex-start; flex-direction: column; gap: .25rem; }
+  .portfolio-segment-heading h3 { text-align: left; }
   .timeline-item { grid-template-columns: 1fr; gap: .4rem; }
   .publication-list article { grid-template-columns: 1fr; gap: .5rem; }
   .publication-list p { grid-column: auto; }

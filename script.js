@@ -14,7 +14,7 @@ nav?.querySelectorAll('a').forEach((link) => {
 });
 
 const filterButtons = document.querySelectorAll('.filter-button');
-const projectCards = document.querySelectorAll('.project-grid > .project-card, .project-grid > .project-stack');
+const projectCards = document.querySelectorAll('.project-grid > .portfolio-segment');
 
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
