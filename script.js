@@ -30,18 +30,17 @@ projectCards.forEach((card) => {
   });
 });
 
-const posterDialog = document.querySelector('#poster-lightbox');
-
-document.querySelector('[data-poster-open]')?.addEventListener('click', () => {
-  posterDialog?.showModal();
+document.querySelectorAll('[data-lightbox-target]').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    document.querySelector(trigger.dataset.lightboxTarget)?.showModal();
+  });
 });
 
-document.querySelector('[data-poster-close]')?.addEventListener('click', () => {
-  posterDialog?.close();
-});
-
-posterDialog?.addEventListener('click', (event) => {
-  if (event.target === posterDialog) posterDialog.close();
+document.querySelectorAll('.poster-lightbox').forEach((dialog) => {
+  dialog.querySelector('[data-lightbox-close]')?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
