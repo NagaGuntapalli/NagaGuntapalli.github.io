@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-labelledby="title desc">
+  <title id="title">Four-step recombining binomial scenario tree</title>
+  <desc id="desc">A starting market price branches into up and down scenarios over four days, creating a recombining lattice of possible price states.</desc>
+  <rect width="1000" height="640" rx="24" fill="#fbfaf6"/>
+  <text x="56" y="58" fill="#17252b" font-family="Georgia, serif" font-size="28" font-weight="700">Recombining Binomial Scenario Tree</text>
+  <text x="56" y="88" fill="#5d6a6f" font-family="Arial, sans-serif" font-size="15">Each step branches to an upper or lower price scenario; equivalent paths recombine.</text>
+
+  <g fill="none" stroke="#355e68" stroke-width="3" stroke-linecap="round" opacity=".66">
+    <path d="M110 330 L300 230 M110 330 L300 420"/>
+    <path d="M300 230 L490 160 M300 230 L490 330 M300 420 L490 330 M300 420 L490 500"/>
+    <path d="M490 160 L680 115 M490 160 L680 255 M490 330 L680 255 M490 330 L680 405 M490 500 L680 405 M490 500 L680 545"/>
+    <path d="M680 115 L870 85 M680 115 L870 205 M680 255 L870 205 M680 255 L870 330 M680 405 L870 330 M680 405 L870 455 M680 545 L870 455 M680 545 L870 575"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="16" font-weight="700">
+    <text x="188" y="257" fill="#2f8d81">U</text>
+    <text x="188" y="400" fill="#b76a43">D</text>
+  </g>
+
+  <g stroke="#ffffff" stroke-width="4">
+    <circle cx="110" cy="330" r="17" fill="#17252b"/>
+    <circle cx="300" cy="230" r="15" fill="#2f8d81"/>
+    <circle cx="300" cy="420" r="15" fill="#b76a43"/>
+    <circle cx="490" cy="160" r="14" fill="#2f8d81"/>
+    <circle cx="490" cy="330" r="14" fill="#6aa99f"/>
+    <circle cx="490" cy="500" r="14" fill="#b76a43"/>
+    <circle cx="680" cy="115" r="13" fill="#2f8d81"/>
+    <circle cx="680" cy="255" r="13" fill="#6aa99f"/>
+    <circle cx="680" cy="405" r="13" fill="#9a8c73"/>
+    <circle cx="680" cy="545" r="13" fill="#b76a43"/>
+    <circle cx="870" cy="85" r="12" fill="#2f8d81"/>
+    <circle cx="870" cy="205" r="12" fill="#56a096"/>
+    <circle cx="870" cy="330" r="12" fill="#7ca39a"/>
+    <circle cx="870" cy="455" r="12" fill="#a8876e"/>
+    <circle cx="870" cy="575" r="12" fill="#b76a43"/>
+  </g>
+
+  <g fill="#5d6a6f" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+    <text x="110" y="620">Day 0</text>
+    <text x="300" y="620">Day 1</text>
+    <text x="490" y="620">Day 2</text>
+    <text x="680" y="620">Day 3</text>
+    <text x="870" y="620">Day 4</text>
+  </g>
+</svg>
