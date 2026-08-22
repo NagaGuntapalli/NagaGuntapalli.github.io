@@ -90,6 +90,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-card-wide { grid-column: 1 / -1; }
 .thesis-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); align-items: start; }
 .thesis-layout .project-poster { margin-top: 0; }
+.thesis-copy h3 { font-size: clamp(1.5rem, 2.35vw, 1.95rem); }
+.project-card .thesis-copy > p:not(.card-category) { font-size: .95rem; }
 .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .project-card.is-hidden { display: none; }
 .card-category { margin: 0 0 .75rem; color: var(--teal); font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
